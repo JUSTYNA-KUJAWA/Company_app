@@ -26,7 +26,7 @@ exports.getAll = async (req, res) => {
 
   exports.getById = async (req, res) => {
     try {
-      const departments = await Department.findById(req.params.id);
+      const dep = await Department.findById(req.params.id);
       if(!dep) res.status(404).json({ message: 'Not found' });
       else res.json(dep);
     }
