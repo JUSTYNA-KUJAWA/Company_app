@@ -8,7 +8,7 @@ describe('Employee', () => {
      mongoose.models = {};
  });
 
-  it('should throw an error if no "firstNname", "lastName", "department" arg', () => {
+  it('should throw an error if no "firstName", "lastName", "department" arg', () => {
 
     const cases = [
       {
