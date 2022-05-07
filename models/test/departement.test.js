@@ -29,8 +29,19 @@ describe('Department', () => {
   });
 
   it('should throw an error if "name" is too short or too long', () => {
+    // we test various cases, some of them are too short, some of them are too long
+    const cases = [
+      {
+        name: 'ABC',
+      },
+      {
+        name: 'abcd',
+      },
+      {
+        name: 'Lorem ipsum, Lorem Ip',
+      },
+    ]
 
-    const cases = ['ABC', 'abcd', 'Lorem ipsum, Lorem Ip']; // we test various cases, some of them are too short, some of them are too long
     for(let name of cases) {
       const dep = new Department({ name });
   
