@@ -48,7 +48,7 @@ describe('Employee', () => {
     for(let firstName of cases) {
       const emp = new Employee(firstName);
       emp.validate(err => {
-      expect(err.errors).to.exist;
+      expect(err.errors.firstName).to.exist;
       });
     }
   });
@@ -59,7 +59,7 @@ describe('Employee', () => {
     for(let lastName of cases) {
       const emp = new Employee(lastName);
       emp.validate(err => {
-      expect(err.errors).to.exist;
+      expect(err.errors.lastName).to.exist;
       });
     }
   });
@@ -70,7 +70,7 @@ describe('Employee', () => {
     for(let department of cases) {
       const emp = new Employee(department);
       emp.validate(err => {
-      expect(err.errors).to.exist;
+      expect(err.errors.department).to.exist;
       });
     }
   });

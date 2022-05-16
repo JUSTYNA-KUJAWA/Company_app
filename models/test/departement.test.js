@@ -53,12 +53,19 @@ describe('Department', () => {
 
   it('should not throw an error if "name" is okay', () => {
 
-    const cases = ['Management', 'Human Resources'];
+    const cases = [
+      {
+        name: 'Management',
+      
+        name: 'Finance',
+      }
+    ];
+    
     for(let name of cases) {
       const dep = new Department({ name });
   
       dep.validate(err => {
-        expect(err).to.not.exist;
+        expect(err).to.not.exist; // nie chcemy, aby jakikolwiek błąd się pojawił (to.not.exist)
       });
   
     }
