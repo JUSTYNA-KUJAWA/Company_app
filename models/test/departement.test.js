@@ -54,11 +54,10 @@ describe('Department', () => {
   it('should not throw an error if "name" is okay', () => {
 
     const cases = [
-      {
-        name: 'Management',
       
-        name: 'Finance',
-      }
+      'Management',
+      'Finance'
+      
     ];
     
     for(let name of cases) {

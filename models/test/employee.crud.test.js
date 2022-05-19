@@ -139,6 +139,9 @@ describe('Employee', () => {
       expect(employees[1].lastName).to.be.equal('Updated LastName!');
       expect(employees[1].department).to.be.equal('Updated Department!');
     });
+    afterEach(async () => {
+      await Employee.deleteMany();
+    });
   });
 
   describe('Removing data', () => {
